@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Verdana, sans-serif;
+}
+textarea {
+  resize: none;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  height: 90vh;
+  padding: 20px;
+}
+header {
+  height: 50px;
+  padding: 5px;
+  text-align: center;
+}
+main {
+  height: calc(100vh - 90px);
+  border: 3px solid lightblue;
+  border-radius: 10px;
+}
+
+.calc__info{
+  display: flex;
+  height: 30%;
+  flex-direction: column;
+  padding: 20px;
+}
+.calc__info .calc__info-tempResult {
+  position: relative;
+  align-content: center;
+  text-align: end;
+  flex-grow: 1;
+  flex-basis: 35%;
+  padding: 10px;
+  overflow-wrap: break-word;
+  border: 1px solid brown;
+  border-radius: 10px 10px 0 0;
+  border-bottom: none;
+}
+
+.error-message::before {
+  display: none;
+}
+.error-message-active::before {
+  content: 'Некорректный ввод';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: #ff9b9b;
+  z-index: 1;
+  text-align: center;
+  align-content: center;
+  border-radius: 10px 10px 0 0;
+}
+.error-message-active.devideByZero::before {
+  content: 'Деление на ноль';
+}
+.calc__info .calc__info-input {
+  width: 100%;
+  flex-grow: 2;
+  flex-basis: 65%;
+  padding: 20px;
+  font-size: 2rem;
+  text-align: right;
+  border: 1px solid brown;
+  border-radius: 0 0 10px 10px;
+}
+
+.btns-container {
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  gap: 5%;
+  padding: 20px;
+}
+.btns-row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  flex-grow: 1;
+  gap: 5%;
+}
+/* .btns-row div:first-child {
+  background-color: #dedede;
+} */
+.btns-container .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 20%;
+  border: 1px solid brown;
+  border-radius: 10px;
+  transition: all 0.1s ease;
+  font-size: 2rem;
+}
+.btn-num {
+  background-color: #dbf1c1;
+}
+.btn-operation {
+  background-color: #dcfdfd;
+}
+.btns-container .btn-result {
+  flex-basis: 73%;
+}
+.btns-container .btn:active {
+  scale: 0.95;
+}
+@media (hover: hover) {
+  .btns-container .btn:hover {
+    box-shadow: 2px 2px 10px #333;
+  }
+}

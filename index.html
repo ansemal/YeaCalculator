@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Проект калькулятор</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Калькулятор</h1>
+    </header>
+    <main>
+      <div class="calc__info">
+        <div class="calc__info-tempResult"></div>
+        <textarea type="text" id="calc_input" class="calc__info-input" ></textarea>
+      </div>
+      <div class="btns-container">
+        <div class="btns-row">
+          <button class="btn btn-operation" value="+">+</button>
+          <button class="btn btn-num" value="7">7</button>
+          <button class="btn btn-num" value="8">8</button>
+          <button class="btn btn-num" value="9">9</button>
+        </div>
+        <div class="btns-row">
+          <button class="btn btn-operation" value="-">-</button>
+          <button class="btn btn-num" value="4">4</button>
+          <button class="btn btn-num" value="5">5</button>
+          <button class="btn btn-num" value="6">6</button>
+        </div>
+        <div class="btns-row">
+          <button class="btn btn-operation" value="/">/</button>
+          <button class="btn btn-num" value="1">1</button>
+          <button class="btn btn-num" value="2">2</button>
+          <button class="btn btn-num" value="3">3</button>
+        </div>
+        <div class="btns-row">
+          <button class="btn btn-operation" value="*">*</button>
+          <button class="btn" value=".">,</button>
+          <button class="btn btn-num" value="0">0</button>
+          <button class="btn" value="Backspace">⌫</button>
+        </div>
+        <div class="btns-row">
+          <button class="btn btn-clear" value="Clear">C</button>
+          <button class="btn btn-result" value="Enter">=</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
