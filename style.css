@@ -92,9 +92,6 @@ main {
   flex-grow: 1;
   gap: 5%;
 }
-/* .btns-row div:first-child {
-  background-color: #dedede;
-} */
 .btns-container .btn {
   display: flex;
   justify-content: center;
